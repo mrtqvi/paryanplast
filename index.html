@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>صنایع پریان پلاست تبریز</title>
+</head>
+
+<body>
+    <!-- start website header -->
+    <header>
+        <section class="container flex justify-between items-center">
+            <!-- header logo -->
+            <section class="flex items-center header__logo">
+                <img class="header__logo__img" src="./assets/images/logo.png" alt="لوگوی پریان پلاست">
+                <h1 class="header__logo__title">صنایع پریان پلاست</h1>
+            </section>
+
+            <!-- header menu item -->
+            <ul class="header__menu">
+                <li class="header__menu__item header__menu__active">
+                    <a href="" class="header__menu__active">صفحه اصلی</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="" class="color-light">درباره ما</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="" class="color-light">محصولات</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="" class="color-light">گالری</a>
+                </li>
+                <li class="header__menu__item">
+                    <a href="" class="color-light">تماس با ما</a>
+                </li>
+
+            </ul>
+
+
+            <!-- hamburger menu icon -->
+            <button class="header__hamburger__button" onclick="toggleAside()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="svg-lg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+            <section class="flex items-center header__gadget">
+                <form>
+                    <section class="header__gadget__search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="header__gadget__search__icon svg-md" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                        <input type="text" placeholder="جستجو" class="header__gadget__search__input">
+                    </section>
+                </form>
+                <section class="header__gadget__lang">
+                    <section class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="svg-md vertical-bottom">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="svg-sm">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </section>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./assets/images/ir.svg" alt="Persian">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/images/gb.svg" alt="United kingdom">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./assets/images/ae.svg" alt="United Arab">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+
+    </header>
+
+    <aside>
+        <ul>
+            <li><a href="" class="header__menu__active color-light">صفحه اصلی</a></li>
+            <li><a href="" class="color-light">درباره ما</a></li>
+            <li><a href="" class="color-light">محصولات</a></li>
+            <li><a href="" class="color-light">گالری</a></li>
+            <li><a href="" class="color-light">تماس با ما</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <!-- introduction -->
+        <section class="intro">
+            <video loop="" autoplay="" muted="" playsinline="">
+                <source src="./assets/videos/intro.mp4" type="video/mp4">
+            </video>
+        </section>
+
+    </main>
+
+    <script>
+        function toggleAside() {
+            const aside = document.querySelector('aside');
+            if (aside.classList.contains('open')) {
+                aside.style.transform = "translateX(200%)";
+                aside.classList.remove('open');
+                return;
+            }
+            else {
+                aside.classList.add('open');
+                aside.style.transform = "translateX(0)";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

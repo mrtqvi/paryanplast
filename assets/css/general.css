@@ -1,0 +1,34 @@
+* {
+    font-family: var(--primary-font);
+}
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+    direction: rtl;
+    color: var(--default-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+}
