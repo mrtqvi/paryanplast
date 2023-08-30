@@ -21,7 +21,7 @@
             <div class="swiper-slide pt-16">
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img rounded-[30px] overflow-hidden shadow-2xl relative"
+                  class="services-img rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/high-quality-services.jpg"
@@ -46,9 +46,12 @@
                     </svg>
                   </span>
                 </div>
-                <div class="text-center">
+                <div id="service-desc-container" class="text-center">
                   <h3 class="title !text-lg !pb-2">چاپ با کیفیت بالا</h3>
-                  <p class="text-lg">
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                  >
                     چاپ با کیفیت بالا شرکت ما با داشتن تجهیزات ماشین آلات پیشرو
                     در این بخش، آن را بخشی از زندگی با کیفیت می داند. چاپ
                   </p>
@@ -58,7 +61,7 @@
             <div class="swiper-slide pt-16">
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative"
+                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/control-services.jpg"
@@ -83,9 +86,12 @@
                     </svg>
                   </span>
                 </div>
-                <div class="text-center">
+                <div id="service-desc-container" class="text-center">
                   <h3 class="title !text-lg !pb-2">کنترل کیفیت</h3>
-                  <p class="text-lg">
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                  >
                     کنترل کیفیت پربان پلاست، با کیفیت بالا به یک شرکت برتر در
                     بازارهای ملی و بین المللی تبدیل شده است.
                   </p>
@@ -95,7 +101,7 @@
             <div class="swiper-slide pt-16">
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative"
+                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/packing-services.jpg"
@@ -120,12 +126,15 @@
                     </svg>
                   </span>
                 </div>
-                <div class="text-center">
+                <div id="service-desc-container" class="text-center">
                   <h3 class="title !text-lg !pb-2">
                     بسته بندی با کیفیت و بهداشتی
                   </h3>
 
-                  <p class="text-lg">
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                  >
                     پریان پلاست با تلفیق فرصت های فناوری های امروزی با تجربه
                     بازار که سال هاست ادامه دارد، تولید را با بهداشت و کیفیت
                     ادغام کرده است. مهمترین مسئولیت این شرکت تولید با کیفیت و
@@ -135,8 +144,6 @@
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -153,7 +160,7 @@
         spaceBetween: 100,
         // autoplay: true,
       });
-     
+
       window.addEventListener("load", () => {
         ServicesSwiper.slideTo(1);
       });

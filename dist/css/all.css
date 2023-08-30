@@ -14,6 +14,16 @@
   width: 50px;
 }
 
+.swiper-slide.swiper-slide-active * #service-desc {
+  z-index: 99999;
+  transform: translate(0);
+  font-size: 18px;
+}
+
+.swiper-slide.swiper-slide-active * #service-desc-container {
+  width: 40vw;
+}
+
 .swiper-slide.swiper-slide-active {
   z-index: 99;
   padding-top: 0;
