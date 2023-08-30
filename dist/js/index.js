@@ -1,4 +1,15 @@
-// const Swiper= "swiper/swiper-element-bundle.min.mjs";
+// script for intro section
+window.addEventListener('load', () => {
+  const introImages = document.querySelectorAll('.intro-image');
+  const introTitle = document.querySelector('.intro-title');
+
+  introImages.forEach(item => item.style.transform = "translate(0)");
+  introTitle.classList.remove('scale-50', 'opacity-0');
+});
+
+
+
+
 let readMore = document.querySelector("#readMore");
 let hiddenDiv = document.querySelector("#hiddenDiv");
 let aboutUsParag = document.querySelector("#aboutUsParag");
@@ -13,18 +24,3 @@ readMore.addEventListener("click", (e) => {
   isAboutUsOpen = !isAboutUsOpen;
 });
 
-// services
-
-// const swiper = new Swiper("#services-swiper", {
-//   // Optional parameters
-//   // direction: "h",
-//   loop: true,
-//   slidesPerView: 1,
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-
-//   autoplay: true,
-// });
