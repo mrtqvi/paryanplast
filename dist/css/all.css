@@ -1,5 +1,30 @@
+@import url("../../node_modules/swiper/swiper-bundle.css");
 /* import fonts */
-@import url('./fonts.css');
+@import url("./fonts.css");
 
 /* import tailwind classes */
-@import url('./app.css');
+@import url("./app.css");
+.swiper-slide.swiper-slide-active * .services-img {
+  width: 40vw;
+  border-radius: 40px;
+  box-shadow: 0px 0px 31px 13px rgba(13, 13, 13, 0.36);
+}
+
+.swiper-slide.swiper-slide-active * .services-img * svg {
+  width: 50px;
+}
+
+.swiper-slide.swiper-slide-active * #service-desc {
+  z-index: 99999;
+  transform: translate(0);
+  font-size: 18px;
+}
+
+.swiper-slide.swiper-slide-active * #service-desc-container {
+  width: 40vw;
+}
+
+.swiper-slide.swiper-slide-active {
+  z-index: 99;
+  padding-top: 0;
+}
