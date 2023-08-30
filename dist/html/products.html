@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/all.css">
+    <title>products section</title>
+</head>
+
+<body dir="rtl" class="font-vazir">
+    <section>
+        <div class="text-center py-12">
+            <h2 class="section-title">
+                محصولات
+            </h2>
+        </div>
+    </section>
+    <section class="flex content-center flex-wrap gap-1 justify-center items-center">
+        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
+                <section
+                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
+                    <section class="flex items-center space-x-3 space-x-reverse">
+                        <img src="./../images/product-1-icon.svg" class="w-10 h-10" alt="">
+                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
+                    </section>
+                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
+                </section>
+                <img src="./../images/product-1.jpg" class="w-full h-full product-image" alt="">
+            </section>
+
+            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML مکعبی (مواد غذایی)
+            </section>
+        </section>
+
+        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+
+            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
+                <section
+                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
+                    <section class="flex items-center space-x-3 space-x-reverse">
+                        <img src="./../images/product-2-icon.svg" class="w-10 h-10" alt="">
+                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
+                    </section>
+                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
+                </section>
+                <img src="./../images/product-2.jpg" class="w-full h-full product-image" alt="">
+            </section>
+
+            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML بیضی (مواد غذایی)
+            </section>
+        </section>
+
+        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+
+            <section class="w-full relative overflow-hidden flex flex-wrap product">
+                <section
+                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
+                    <section class="flex items-center space-x-3 space-x-reverse">
+                        <img src="./../images/product-3-icon.svg" class="w-10 h-10" alt="">
+                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
+                    </section>
+                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
+                </section>
+                <img src="./../images/product-3.jpg" class="w-full h-full product-image" alt="">
+            </section>
+
+            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">درپوش پلاستیکی</section>
+        </section>
+
+        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+
+            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
+                <section
+                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
+                    <section class="flex items-center space-x-3 space-x-reverse">
+                        <img src="./../images/product-4-icon.svg" class="w-10 h-10" alt="">
+                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
+                    </section>
+                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
+                </section>
+                <img src="./../images/product-4.jpg" class="w-full h-full product-image" alt="">
+            </section>
+
+            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML گرد (مواد غذایی)
+            </section>
+        </section>
+    </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            const products = document.querySelectorAll('.product-container');
+            products.forEach(item => item.style.transform = "translate(0)");
+        })
+    </script>
+</body>
+
+</html>
