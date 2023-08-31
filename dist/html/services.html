@@ -8,20 +8,25 @@
     <title>services</title>
   </head>
   <body class="font-vazir relative">
-    <section class="container">
+    <section class="container overflow-hidden">
       <div class="flex flex-col items-center">
         <h2 class="title text-center text-5xl">خدمات ما</h2>
 
         <!-- Slider main container -->
 
-        <div id="services-swiper" class="w-[20vw] pt-3">
+        <div
+          id="services-swiper"
+          class="md:w-[20vw] w-full pt-3 max-md:overflow-hidden"
+        >
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide pt-16">
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img rounded-[30px] overflow-hidden shadow-2xl relative z-10"
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/high-quality-services.jpg"
@@ -50,7 +55,7 @@
                   <h3 class="title !text-lg !pb-2">چاپ با کیفیت بالا</h3>
                   <p
                     id="service-desc"
-                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
                   >
                     چاپ با کیفیت بالا شرکت ما با داشتن تجهیزات ماشین آلات پیشرو
                     در این بخش، آن را بخشی از زندگی با کیفیت می داند. چاپ
@@ -58,10 +63,12 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide pt-16">
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/control-services.jpg"
@@ -90,7 +97,7 @@
                   <h3 class="title !text-lg !pb-2">کنترل کیفیت</h3>
                   <p
                     id="service-desc"
-                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
                   >
                     کنترل کیفیت پربان پلاست، با کیفیت بالا به یک شرکت برتر در
                     بازارهای ملی و بین المللی تبدیل شده است.
@@ -98,10 +105,12 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide pt-16">
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
               <div class="flex flex-col items-center">
                 <div
-                  class="services-img transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[30px] overflow-hidden shadow-2xl relative z-10"
                 >
                   <img
                     src="../images/packing-services.jpg"
@@ -133,7 +142,7 @@
 
                   <p
                     id="service-desc"
-                    class="-translate-y-32 text-[1px] transition-all duration-500"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
                   >
                     پریان پلاست با تلفیق فرصت های فناوری های امروزی با تجربه
                     بازار که سال هاست ادامه دارد، تولید را با بهداشت و کیفیت
@@ -150,19 +159,41 @@
 
     <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
     <script>
-      const ServicesSwiper = new Swiper("#services-swiper", {
-        clickable: true,
-        centeredSlides: true,
+      const servicesSwiper = new Swiper("#services-swiper", {
+        slidesperview: 1,
         loop: true,
-        setWrapperSize: true,
-        slideToClickedSlide: true,
-        loopedSlides: 2,
-        spaceBetween: 100,
-        // autoplay: true,
+        spaceBetween: 10,
+
+        speed: 500,
+        autoplay: true,
+        breakpoints: {
+          // when window width is >= 320px
+          320: {},
+          // when window width is >= 480px
+          480: {},
+          // when window width is >= 640px
+          768: {
+            spaceBetween: 10,
+            centeredSlides: true,
+            setWrapperSize: true,
+            slideToClickedSlide: true,
+            loopedSlides: 2,
+            clickable: true,
+            speed: 500,
+
+            // allowSlideNext: false,
+            // navigation: {
+            //   nextEl: ".swiper-button-next",
+            //   prevEl: ".swiper-button-prev",
+            // },
+          },
+        },
       });
 
-      window.addEventListener("load", () => {
-        ServicesSwiper.slideTo(1);
+      window.addEventListener("load", (e) => {
+        console.log(e);
+        console.log(servicesSwiper.activeIndex-1);
+        servicesSwiper.slideTo(servicesSwiper.activeIndex-1);
       });
     </script>
     <!-- <script src="../js/index.js"></script> -->
