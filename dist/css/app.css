@@ -823,6 +823,11 @@ video {
   width: 25%;
 }
 
+.-translate-y-32 {
+  --tw-translate-y: -8rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -1183,6 +1188,10 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-\[1px\] {
+  font-size: 1px;
 }
 
 .text-\[1px\] {
