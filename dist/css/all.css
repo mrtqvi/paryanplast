@@ -9,7 +9,7 @@
 .swiper-slide {
   opacity: 50%;
   transition: opacity 1s;
-} 
+}
 
 .swiper-slide.swiper-slide-active {
   opacity: 100% !important;
@@ -19,19 +19,19 @@
   .swiper-slide.swiper-slide-active * .services-img {
     width: 35vw;
     opacity: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .swiper-slide.swiper-slide-active * .services-img * svg {
+    display: block;
     width: 50px;
   }
 
   .swiper-slide.swiper-slide-active * #service-desc {
     z-index: 99999;
     transform: translate(0);
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: #666;
-    
   }
 
   .swiper-slide.swiper-slide-active * #service-desc-container {

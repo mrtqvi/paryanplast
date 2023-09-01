@@ -1,436 +1,682 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-
-<head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/app.css">
-    <link rel="stylesheet" href="./../css/all.css">
+  <head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../css/app.css" />
+    <link rel="stylesheet" href="./../css/all.css" />
     <title>صنایع پریان پلاست</title>
-</head>
+  </head>
 
-<body class="font-vazir">
+  <body class="font-vazir">
     <!-- start header -->
-    <nav class="z-40 w-full static md:fixed top-0 px-2 md:px-4 py-2.5" id="header">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <div class="flex items-center">
-                <img src="../images/logo.png" alt="" class="h-14 whitespace-nowrap">
-            </div>
-            <div class="flex md:order-2  ">
-                <div class="flexbox pl-2 mr-10 md:p-0 mt-3">
-                    <div class="search ">
-                        <div>
-                            <input type="text" class="text-gray-700" placeholder="جست و جو کنید..." required>
-                        </div>
-                    </div>
-                </div>
-                <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
-                    class="flex  items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600  md:mr-0 "
-                    type="button">
-                    <img class="w-11 h-7 ml-2 rounded-lg"
-                        src="https://www.milad-hospital.com/images/settings/languages/fa.png" alt="user photo">
-                    <svg class="w-2.5 h-2.5 mr-1 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="m1 1 4 4 4-4" />
-                    </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownAvatarName"
-                    class="z-10 hidden bg-white divide-y items-center justify-center divide-gray-100 rounded-lg shadow w-[100px]">
-                    <ul class="py-2  text-sm" aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
-                        <li>
-                            <a href="#">
-                                <div class="inline-flex items-center">
-                                    <img src="https://www.milad-hospital.com/images/settings/languages/en.jpg"
-                                        alt="English" class="w-7 h-5 mr-2 rounded-lg">
-                                    <span class="mx-2">
-                                        English
-                                    </span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex items-center md:order-1 md:p-0 mr-1 ">
-                    <button data-collapse-toggle="mega-menu" type="button"
-                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-                        aria-controls="mega-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div id="mega-menu"
-                class="hidden lg:mr-28 items-center w-full text-sm md:text-xs lg:text-sm md:flex md:w-auto md:order-1">
-                <ul class="flex  flex-col mt-4 font-medium md:flex-row md:space-x-8 lg:space-x-14 md:mt-0">
-                    <li class=" ml-12">
-                        <a id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
-                            class="flex items-center  whitespace-nowrap w-full text-gray-700 font-bold  border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent  md:hover:text-yellow-600 p-1 md:p-0 md:w-auto">درباره
-                            ما </a>
-                    </li>
-
-                    <li class="">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
-                            class="flex items-center  whitespace-nowrap w-full text-gray-700 font-bold  border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent  md:hover:text-yellow-600 p-1 md:p-0 md:w-auto">
-                            محصولات
-                        </button>
-                    </li>
-
-                    <li class="md:ml-4 ">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
-                            class="flex items-center  whitespace-nowrap w-full text-gray-700 font-bold  border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent  md:hover:text-yellow-600 p-1 md:p-0 md:w-auto">
-                            گالری
-                        </button>
-                    </li>
-                    <li class="md:ml-4 ml-6">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
-                            class="flex items-center  whitespace-nowrap w-full text-gray-700 font-bold  border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent  md:hover:text-yellow-600 p-1 md:p-0 md:w-auto">
-                            تماس با ما
-                        </button>
-                    </li>
-                    <li class="md:ml-4 ml-6">
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="1-parentMenu"
-                            class="flex items-center  whitespace-nowrap w-full text-gray-700 font-bold  border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent  md:hover:text-yellow-600 p-1 md:p-0 md:w-auto">
-                            استخدام
-                        </button>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="z-40 w-full static md:fixed top-0 px-2 md:px-4 py-2.5"
+      id="header"
+    >
+      <div
+        class="container flex flex-wrap items-center justify-between mx-auto"
+      >
+        <div class="flex items-center">
+          <img src="../images/logo.png" alt="" class="h-14 whitespace-nowrap" />
         </div>
+        <div class="flex md:order-2">
+          <div class="flexbox pl-2 mr-10 md:p-0 mt-3">
+            <div class="search">
+              <div>
+                <input
+                  type="text"
+                  class="text-gray-700"
+                  placeholder="جست و جو کنید..."
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            id="dropdownAvatarNameButton"
+            data-dropdown-toggle="dropdownAvatarName"
+            class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 md:mr-0"
+            type="button"
+          >
+            <img
+              class="w-11 h-7 ml-2 rounded-lg"
+              src="https://www.milad-hospital.com/images/settings/languages/fa.png"
+              alt="user photo"
+            />
+            <svg
+              class="w-2.5 h-2.5 mr-1 text-gray-700"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownAvatarName"
+            class="z-10 hidden bg-white divide-y items-center justify-center divide-gray-100 rounded-lg shadow w-[100px]"
+          >
+            <ul
+              class="py-2 text-sm"
+              aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
+            >
+              <li>
+                <a href="#">
+                  <div class="inline-flex items-center">
+                    <img
+                      src="https://www.milad-hospital.com/images/settings/languages/en.jpg"
+                      alt="English"
+                      class="w-7 h-5 mr-2 rounded-lg"
+                    />
+                    <span class="mx-2"> English </span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center md:order-1 md:p-0 mr-1">
+            <button
+              data-collapse-toggle="mega-menu"
+              type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="mega-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                aria-hidden="true"
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mega-menu"
+          class="hidden lg:mr-28 items-center w-full text-sm md:text-xs lg:text-sm md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 lg:space-x-14 md:mt-0"
+          >
+            <li class="ml-12">
+              <a
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="1-parentMenu"
+                class="flex items-center whitespace-nowrap w-full text-gray-700 font-bold border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent md:hover:text-yellow-600 p-1 md:p-0 md:w-auto"
+                >درباره ما
+              </a>
+            </li>
+
+            <li class="">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="1-parentMenu"
+                class="flex items-center whitespace-nowrap w-full text-gray-700 font-bold border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent md:hover:text-yellow-600 p-1 md:p-0 md:w-auto"
+              >
+                محصولات
+              </button>
+            </li>
+
+            <li class="md:ml-4">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="1-parentMenu"
+                class="flex items-center whitespace-nowrap w-full text-gray-700 font-bold border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent md:hover:text-yellow-600 p-1 md:p-0 md:w-auto"
+              >
+                گالری
+              </button>
+            </li>
+            <li class="md:ml-4 ml-6">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="1-parentMenu"
+                class="flex items-center whitespace-nowrap w-full text-gray-700 font-bold border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent md:hover:text-yellow-600 p-1 md:p-0 md:w-auto"
+              >
+                تماس با ما
+              </button>
+            </li>
+            <li class="md:ml-4 ml-6">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="1-parentMenu"
+                class="flex items-center whitespace-nowrap w-full text-gray-700 font-bold border-gray-100 hover:bg-gray-300 hover:opacity-60 md:hover:bg-transparent md:hover:text-yellow-600 p-1 md:p-0 md:w-auto"
+              >
+                استخدام
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <!-- end header -->
 
     <!-- start intro -->
     <section
-        class="min-h-screen screen space-x-2 space-x-reverse overflow-x-hidden flex flex-col md:flex-row justify-around items-center relative">
-        <svg id="wave" class="absolute top-0 -z-10" style="transform: rotate(180deg); transition: 0.3s"
-            viewBox="0 0 1440 470" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-                    <stop stop-color="rgba(224.999, 199.033, 100.007, .5)" offset="0%"></stop>
-                    <stop stop-color="rgba(255, 218, 135, 0.5)" offset="100%"></stop>
-                </linearGradient>
-            </defs>
-            <path style="transform: translate(0, 0px); opacity: 1" fill="url(#sw-gradient-0)"
-                d="M0,235L40,219.3C80,204,160,172,240,180.2C320,188,400,235,480,219.3C560,204,640,125,720,141C800,157,880,266,960,266.3C1040,266,1120,157,1200,101.8C1280,47,1360,47,1440,39.2C1520,31,1600,16,1680,7.8C1760,0,1840,0,1920,23.5C2000,47,2080,94,2160,94C2240,94,2320,47,2400,47C2480,47,2560,94,2640,156.7C2720,219,2800,298,2880,297.7C2960,298,3040,219,3120,172.3C3200,125,3280,110,3360,141C3440,172,3520,251,3600,266.3C3680,282,3760,235,3840,203.7C3920,172,4000,157,4080,148.8C4160,141,4240,141,4320,133.2C4400,125,4480,110,4560,94C4640,78,4720,63,4800,101.8C4880,141,4960,235,5040,274.2C5120,313,5200,298,5280,266.3C5360,235,5440,188,5520,195.8C5600,204,5680,266,5720,297.7L5760,329L5760,470L5720,470C5680,470,5600,470,5520,470C5440,470,5360,470,5280,470C5200,470,5120,470,5040,470C4960,470,4880,470,4800,470C4720,470,4640,470,4560,470C4480,470,4400,470,4320,470C4240,470,4160,470,4080,470C4000,470,3920,470,3840,470C3760,470,3680,470,3600,470C3520,470,3440,470,3360,470C3280,470,3200,470,3120,470C3040,470,2960,470,2880,470C2800,470,2720,470,2640,470C2560,470,2480,470,2400,470C2320,470,2240,470,2160,470C2080,470,2000,470,1920,470C1840,470,1760,470,1680,470C1600,470,1520,470,1440,470C1360,470,1280,470,1200,470C1120,470,1040,470,960,470C880,470,800,470,720,470C640,470,560,470,480,470C400,470,320,470,240,470C160,470,80,470,40,470L0,470Z">
-            </path>
-        </svg>
-        <!-- intro descriptions -->
-        <section
-            class="w-full md:w-1/2 mt-8 md:mt-0 text-center space-y-8 mb-8 md:mb-0 container opacity-0 scale-50 transition-scale intro-title">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700">
-                صنایع پریان پلاست
-            </h1>
-            <p class="text-gray-600 leading-7">
-                شرکت پریان پلاست تبریز فعالیت خود را از سال 1393 در زمینه تولید ظروف
-                (IML (In Mold Labeling جهت بسته بندي مواد خوراکی ، بهداشتی و شیمیایی
-                آغاز نمود
-            </p>
+      class="min-h-screen screen space-x-2 space-x-reverse overflow-x-hidden flex flex-col md:flex-row justify-around items-center relative"
+    >
+      <svg
+        id="wave"
+        class="absolute top-0 -z-10"
+        style="transform: rotate(180deg); transition: 0.3s"
+        viewBox="0 0 1440 470"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop
+              stop-color="rgba(224.999, 199.033, 100.007, .5)"
+              offset="0%"
+            ></stop>
+            <stop stop-color="rgba(255, 218, 135, 0.5)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="url(#sw-gradient-0)"
+          d="M0,235L40,219.3C80,204,160,172,240,180.2C320,188,400,235,480,219.3C560,204,640,125,720,141C800,157,880,266,960,266.3C1040,266,1120,157,1200,101.8C1280,47,1360,47,1440,39.2C1520,31,1600,16,1680,7.8C1760,0,1840,0,1920,23.5C2000,47,2080,94,2160,94C2240,94,2320,47,2400,47C2480,47,2560,94,2640,156.7C2720,219,2800,298,2880,297.7C2960,298,3040,219,3120,172.3C3200,125,3280,110,3360,141C3440,172,3520,251,3600,266.3C3680,282,3760,235,3840,203.7C3920,172,4000,157,4080,148.8C4160,141,4240,141,4320,133.2C4400,125,4480,110,4560,94C4640,78,4720,63,4800,101.8C4880,141,4960,235,5040,274.2C5120,313,5200,298,5280,266.3C5360,235,5440,188,5520,195.8C5600,204,5680,266,5720,297.7L5760,329L5760,470L5720,470C5680,470,5600,470,5520,470C5440,470,5360,470,5280,470C5200,470,5120,470,5040,470C4960,470,4880,470,4800,470C4720,470,4640,470,4560,470C4480,470,4400,470,4320,470C4240,470,4160,470,4080,470C4000,470,3920,470,3840,470C3760,470,3680,470,3600,470C3520,470,3440,470,3360,470C3280,470,3200,470,3120,470C3040,470,2960,470,2880,470C2800,470,2720,470,2640,470C2560,470,2480,470,2400,470C2320,470,2240,470,2160,470C2080,470,2000,470,1920,470C1840,470,1760,470,1680,470C1600,470,1520,470,1440,470C1360,470,1280,470,1200,470C1120,470,1040,470,960,470C880,470,800,470,720,470C640,470,560,470,480,470C400,470,320,470,240,470C160,470,80,470,40,470L0,470Z"
+        ></path>
+      </svg>
+      <!-- intro descriptions -->
+      <section
+        class="w-full md:w-1/2 mt-8 md:mt-0 text-center space-y-8 mb-8 md:mb-0 container opacity-0 scale-50 transition-scale intro-title"
+      >
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700"
+        >
+          صنایع پریان پلاست
+        </h1>
+        <p class="text-gray-600 leading-7">
+          شرکت پریان پلاست تبریز فعالیت خود را از سال 1393 در زمینه تولید ظروف
+          (IML (In Mold Labeling جهت بسته بندي مواد خوراکی ، بهداشتی و شیمیایی
+          آغاز نمود
+        </p>
+      </section>
+      <!-- intro images -->
+      <section
+        class="w-full md:w-1/2 h-full container flex flex-col items-center justify-center mt-8 md:mt-16"
+      >
+        <section class="flex w-[22rem] sm:w-[25rem] h-72 image-container">
+          <section
+            class="bg-[url(./../images/intro-1.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image"
+          ></section>
+          <section
+            class="bg-[url(./../images/intro-2.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image"
+          ></section>
+          <section
+            class="bg-[url(./../images/intro-4.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image"
+          ></section>
         </section>
-        <!-- intro images -->
-        <section class="w-full md:w-1/2 h-full container flex flex-col items-center justify-center mt-8 md:mt-16">
-            <section class="flex w-[22rem] sm:w-[25rem] h-72 image-container">
-                <section
-                    class="bg-[url(./../images/intro-1.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image">
-                </section>
-                <section
-                    class="bg-[url(./../images/intro-2.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image">
-                </section>
-                <section
-                    class="bg-[url(./../images/intro-4.jpg)] w-1/3 -translate-x-[500%] ml-2 bg-cover bg-center hover:grayscale intro-image">
-                </section>
-            </section>
-            <section class="w-[22rem] sm:w-[25rem] flex mt-2 pl-2">
-                <section
-                    class="bg-[url(./../images/intro-3.jpg)] -translate-x-[500%] intro-image w-full h-28 bg-cover bg-center hover:grayscale">
-                </section>
-            </section>
+        <section class="w-[22rem] sm:w-[25rem] flex mt-2 pl-2">
+          <section
+            class="bg-[url(./../images/intro-3.jpg)] -translate-x-[500%] intro-image w-full h-28 bg-cover bg-center hover:grayscale"
+          ></section>
         </section>
+      </section>
     </section>
 
     <!-- end intro -->
 
     <!-- start about us -->
     <div class="container flex py-9 flex-wrap justify-center">
-        <div class="md:w-1/3">
-            <div class="md:pr-8 relative">
-                <img src="../images/about-us.jpg" class="w-full" alt=" about-us " />
-                <span class="absolute bg-white md:p-5 p-3 max-w-[80%] md:text-lg -bottom-10 right-0 shadow-lg">
-                    <p>بهترین کیفیت چاپ را با ما تجربه خواهید کرد</p>
-                    <span class="block font-medium text-sm">
-                        <a href="#" class="flex justify-end items-center text-blue-400 hover:text-blue-900">بیشتر بدانید
-                            <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" class="mr-1">
-                                <path d="M6.64176 2L2 6.5L6.64176 11M15 6.5H2.13Z" fill="white" />
-                                <path d="M6.64176 2L2 6.5L6.64176 11M15 6.5H2.13" stroke="#4A98F7" stroke-width="3"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </span>
-                </span>
-            </div>
+      <div class="md:w-1/3">
+        <div class="md:pr-8 relative">
+          <img src="../images/about-us.jpg" class="w-full" alt=" about-us " />
+          <span
+            class="absolute bg-white md:p-5 p-3 max-w-[80%] md:text-lg -bottom-10 right-0 shadow-lg"
+          >
+            <p>بهترین کیفیت چاپ را با ما تجربه خواهید کرد</p>
+            <span class="block font-medium text-sm">
+              <a
+                href="#"
+                class="flex justify-end items-center text-blue-400 hover:text-blue-900"
+                >بیشتر بدانید
+                <svg
+                  width="17"
+                  height="13"
+                  viewBox="0 0 17 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="mr-1"
+                >
+                  <path
+                    d="M6.64176 2L2 6.5L6.64176 11M15 6.5H2.13Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M6.64176 2L2 6.5L6.64176 11M15 6.5H2.13"
+                    stroke="#4A98F7"
+                    stroke-width="3"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </span>
+          </span>
         </div>
-        <div class="md:w-2/3 flex flex-col md:p-8 py-8 relative">
-            <h3 class="title">پرنیان پلاست</h3>
-            <div class="relative">
-                <p id="aboutUsParag"
-                    class="text-lg text-justify leading-9 h-52 overflow-hidden transition-all duration-1000">
-                    شرکت پریان پلاست تبریز فعالیت خود را از سال 1393 در زمینه تولید ظروف
-                    )IML (In Mold Labeling جهت بسته بندي مواد خوراکی ، بهداشتی و شیمیایی
-                    ، آغاز نمود و با فراهم آوردن زیر ساخت هاي مناسب و بهره گیري از
-                    تجهیزات ، ماشین آلات تمام اتوماتیک و دستگاه هاي هایدرایو پیشرفته
-                    مطابق فناوري روز دنیا بعنوان یکی از برجسته ترین تولید کنندگان این
-                    صنعت نوپا در کشور محسوب می گردد. مدیریت این شرکت با تکیه بر تجربیات
-                    ارزشمند 40 ساله خود در زمینه تولید و بسته بندي و با هدف رشد و توسعه
-                    این صنعت در کشور و هم چنین تامین نیاز مشتریان جهت سهولت دسترسی به یک
-                    بسته بندي مرغوب ، با کیفیت ، زیبا ، با طول عمر مناسب و چاپ بی نظیر و
-                    بهداشتی قدم در این عرصه نهاد . هم اکنون شرکت پریان پلاست تبریز مفتخر
-                    است که با همکاري کادري مجرب و با تجربه و خلاق و با رعایت
-                    استانداردهاي کیفی ، در زمره برترین تامین کنندگان ظروف IML براي صنایع
-                    تولیدي مختلف اعم از داخلی و خارجی قرار دارد.
-                </p>
-                <div id="hiddenDiv"
-                    class="w-full h-full absolute bottom-0 bg-gradient-to-t from-white from-10% via-transparent to-transparent">
-                </div>
-            </div>
-            <button id="readMore" class="text-left hover:text-blue-800 font-medium">
-                اطلاعات بیشتر...
-            </button>
-            <a href="#"
-                class="text-left absolute bottom-0 bg-blue-900 text-white p-2 px-4 rounded-full hover:bg-gray-700">
-                درباره پریان پلاست
-            </a>
+      </div>
+      <div
+        class="md:w-2/3 flex flex-col md:p-8 py-8 relative transition-all duration-1000"
+      >
+        <h3 class="title !mt-0">پرنیان پلاست</h3>
+        <div class="relative">
+          <p
+            id="aboutUsParag"
+            class="text-lg text-justify leading-9 h-52 overflow-hidden transition-all duration-1000"
+          >
+            شرکت پریان پلاست تبریز فعالیت خود را از سال 1393 در زمینه تولید ظروف
+            )IML (In Mold Labeling جهت بسته بندي مواد خوراکی ، بهداشتی و شیمیایی
+            ، آغاز نمود و با فراهم آوردن زیر ساخت هاي مناسب و بهره گیري از
+            تجهیزات ، ماشین آلات تمام اتوماتیک و دستگاه هاي هایدرایو پیشرفته
+            مطابق فناوري روز دنیا بعنوان یکی از برجسته ترین تولید کنندگان این
+            صنعت نوپا در کشور محسوب می گردد. مدیریت این شرکت با تکیه بر تجربیات
+            ارزشمند 40 ساله خود در زمینه تولید و بسته بندي و با هدف رشد و توسعه
+            این صنعت در کشور و هم چنین تامین نیاز مشتریان جهت سهولت دسترسی به یک
+            بسته بندي مرغوب ، با کیفیت ، زیبا ، با طول عمر مناسب و چاپ بی نظیر و
+            بهداشتی قدم در این عرصه نهاد . هم اکنون شرکت پریان پلاست تبریز مفتخر
+            است که با همکاري کادري مجرب و با تجربه و خلاق و با رعایت
+            استانداردهاي کیفی ، در زمره برترین تامین کنندگان ظروف IML براي صنایع
+            تولیدي مختلف اعم از داخلی و خارجی قرار دارد.
+          </p>
+          <div
+            id="hiddenDiv"
+            class="w-full h-full absolute bottom-0 bg-gradient-to-t from-white from-10% via-transparent to-transparent"
+          ></div>
         </div>
+        <button
+          id="readMore"
+          class="text-left hover:text-blue-800 font-medium transition-all duration-1000"
+        >
+          اطلاعات بیشتر...
+        </button>
+        <a
+          href="#"
+          class="text-left absolute bottom-0 bg-blue-900 text-white p-2 px-4 rounded-full hover:bg-gray-700"
+        >
+          درباره پریان پلاست
+        </a>
+      </div>
     </div>
     <!-- end about us -->
 
     <!-- start services -->
     <section class="container overflow-hidden mt-8">
-        <div class="flex flex-col items-center">
-            <section>
-                <div class="text-center py-12">
-                    <h2 class="section-title">
-                        خدمات ما
-                    </h2>
-                </div>
-            </section>
-            <!-- Slider main container -->
+      <div class="flex flex-col items-center">
+        <section>
+          <div class="text-center py-12">
+            <h2 class="section-title">خدمات ما</h2>
+          </div>
+        </section>
+        <!-- Slider main container -->
 
-            <div id="services-swiper" class="md:w-[20vw] w-full pt-3 max-md:overflow-hidden">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="services-img md:duration-500 w-full md:transition-all rounded-[0.5rem] overflow-hidden relative z-10">
-                                <img src="../images/high-quality-services.jpg" class="w-full" alt="" />
-                                <span class="absolute w-full h-full top-0 flex justify-center items-center">
-                                    <svg class="w-[30px]" viewBox="0 0 58 64" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
-                                            fill="#DEB146" stroke="#133C64" stroke-width="3" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div id="service-desc-container" class="text-center">
-                                <h3 class="title !text-lg !pb-2">چاپ با کیفیت بالا</h3>
-                                <p id="service-desc"
-                                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500">
-                                    چاپ با کیفیت بالا شرکت ما با داشتن تجهیزات ماشین آلات پیشرو
-                                    در این بخش، آن را بخشی از زندگی با کیفیت می داند. چاپ
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="services-img md:duration-500 w-full md:transition-all rounded-[0.5rem] overflow-hidden shadow-2xl relative z-10">
-                                <img src="../images/control-services.jpg" class="w-full" alt="" />
-                                <span class="absolute w-full h-full top-0 flex justify-center items-center">
-                                    <svg class="w-[30px]" viewBox="0 0 58 64" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
-                                            fill="#DEB146" stroke="#133C64" stroke-width="3" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div id="service-desc-container" class="text-center">
-                                <h3 class="title !text-lg !pb-2">کنترل کیفیت</h3>
-                                <p id="service-desc"
-                                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500">
-                                    کنترل کیفیت پربان پلاست، با کیفیت بالا به یک شرکت برتر در
-                                    بازارهای ملی و بین المللی تبدیل شده است.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500">
-                        <div class="flex flex-col items-center">
-                            <div
-                                class="services-img md:duration-500 w-full md:transition-all rounded-[.5rem] overflow-hidden shadow-2xl relative z-10">
-                                <img src="../images/packing-services.jpg" class="w-full" alt="" />
-                                <span class="absolute w-full h-full top-0 flex justify-center items-center">
-                                    <svg class="w-[30px]" viewBox="0 0 58 64" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
-                                            fill="#DEB146" stroke="#133C64" stroke-width="3" />
-                                    </svg>
-                                </span>
-                            </div>
-                            <div id="service-desc-container" class="text-center">
-                                <h3 class="title !text-lg !pb-2">
-                                    بسته بندی با کیفیت و بهداشتی
-                                </h3>
-
-                                <p id="service-desc"
-                                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500">
-                                    پریان پلاست با تلفیق فرصت های فناوری های امروزی با تجربه
-                                    بازار که سال هاست ادامه دارد، تولید را با بهداشت و کیفیت
-                                    ادغام کرده است. مهمترین مسئولیت این شرکت تولید با کیفیت و
-                                    الزامات بهداشتی است.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        <div
+          id="services-swiper"
+          class="md:w-[20vw] w-full pt-3 max-md:overflow-hidden"
+        >
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[0.5rem] overflow-hidden relative z-10"
+                >
+                  <img
+                    src="../images/high-quality-services.jpg"
+                    class="w-full"
+                    alt=""
+                  />
+                  <span
+                    class="absolute w-full h-full top-0 flex justify-center items-center"
+                  >
+                    <svg
+                      class="w-[30px] hidden"
+                      viewBox="0 0 58 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="services-path"
+                        data-parent-name="high"
+                        d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
+                        fill="#DEB146"
+                        stroke="#133C64"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </span>
                 </div>
+                <div id="service-desc-container" class="text-center">
+                  <h3 class="title !mt-0 !text-lg !pb-2">چاپ با کیفیت بالا</h3>
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
+                  >
+                    چاپ با کیفیت بالا شرکت ما با داشتن تجهیزات ماشین آلات پیشرو
+                    در این بخش، آن را بخشی از زندگی با کیفیت می داند. چاپ
+                  </p>
+                </div>
+              </div>
             </div>
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[0.5rem] overflow-hidden shadow-2xl relative z-10"
+                >
+                  <img
+                    src="../images/control-services.jpg"
+                    class="w-full"
+                    alt=""
+                  />
+                  <span
+                    class="absolute w-full h-full top-0 flex justify-center items-center"
+                  >
+                    <svg
+                      class="w-[30px] hidden"
+                      viewBox="0 0 58 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="services-path"
+                        data-parent-name="control"
+                        d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
+                        fill="#DEB146"
+                        stroke="#133C64"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div id="service-desc-container" class="text-center">
+                  <h3 class="title !mt-0 !text-lg !pb-2">کنترل کیفیت</h3>
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
+                  >
+                    کنترل کیفیت پربان پلاست، با کیفیت بالا به یک شرکت برتر در
+                    بازارهای ملی و بین المللی تبدیل شده است.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="services-img md:duration-500 w-full md:transition-all rounded-[.5rem] overflow-hidden shadow-2xl relative z-10"
+                >
+                  <img
+                    src="../images/packing-services.jpg"
+                    class="w-full"
+                    alt=""
+                  />
+                  <span
+                    class="absolute w-full h-full top-0 flex justify-center items-center"
+                  >
+                    <svg
+                      class="w-[30px] hidden"
+                      viewBox="0 0 58 64"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="services-path"
+                        data-parent-name="packing"
+                        d="M13.3854 2.69759C8.37624 -0.276275 2.03706 3.34657 2.05667 9.17193L2.20777 54.0553C2.22712 59.8029 8.4389 63.3935 13.4291 60.5416L51.8724 38.5714C56.8626 35.7195 56.922 28.5448 51.9798 25.6107L13.3854 2.69759Z"
+                        fill="#DEB146"
+                        stroke="#133C64"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div id="service-desc-container" class="text-center">
+                  <h3 class="title !mt-0 !text-lg !pb-2">
+                    بسته بندی با کیفیت و بهداشتی
+                  </h3>
+
+                  <p
+                    id="service-desc"
+                    class="-translate-y-32 text-[1px] md:transition-all md:duration-500"
+                  >
+                    پریان پلاست با تلفیق فرصت های فناوری های امروزی با تجربه
+                    بازار که سال هاست ادامه دارد، تولید را با بهداشت و کیفیت
+                    ادغام کرده است. مهمترین مسئولیت این شرکت تولید با کیفیت و
+                    الزامات بهداشتی است.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- start products -->
     <section id="product">
-        <div class="text-center py-12">
-            <h2 class="section-title">
-                محصولات
-            </h2>
-        </div>
+      <div class="text-center py-12">
+        <h2 class="section-title">محصولات</h2>
+      </div>
     </section>
-    <section class="flex content-center flex-wrap gap-1 justify-center items-center">
-        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
-            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
-                <section
-                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
-                    <section class="flex items-center space-x-3 space-x-reverse">
-                        <img src="./../images/product-1-icon.svg" class="w-10 h-10" alt="">
-                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
-                    </section>
-                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
-                </section>
-                <img src="./../images/product-1.jpg" class="w-full h-full product-image" alt="">
+    <section
+      class="flex content-center flex-wrap gap-1 justify-center items-center"
+    >
+      <section
+        class="w-2/3 sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container"
+      >
+        <section
+          class="w-full relative overflow-hidden flex flex-wrap gap-2 product"
+        >
+          <section
+            class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay"
+          >
+            <section class="flex items-center space-x-3 space-x-reverse">
+              <img
+                src="./../images/product-1-icon.svg"
+                class="w-10 h-10"
+                alt=""
+              />
+              <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
             </section>
-
-            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML مکعبی (مواد غذایی)
-            </section>
+            <a
+              href=""
+              class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500"
+              >جزئیات بیشتر</a
+            >
+          </section>
+          <img
+            src="./../images/product-1.jpg"
+            class="w-full h-full product-image"
+            alt=""
+          />
         </section>
 
-        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+        <section
+          class="font-light text-center text-sm md:text-base text-gray-700 mt-3"
+        >
+          ظروف IML مکعبی (مواد غذایی)
+        </section>
+      </section>
 
-            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
-                <section
-                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
-                    <section class="flex items-center space-x-3 space-x-reverse">
-                        <img src="./../images/product-2-icon.svg" class="w-10 h-10" alt="">
-                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
-                    </section>
-                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
-                </section>
-                <img src="./../images/product-2.jpg" class="w-full h-full product-image" alt="">
+      <section
+        class="w-2/3 sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container"
+      >
+        <section
+          class="w-full relative overflow-hidden flex flex-wrap gap-2 product"
+        >
+          <section
+            class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay"
+          >
+            <section class="flex items-center space-x-3 space-x-reverse">
+              <img
+                src="./../images/product-2-icon.svg"
+                class="w-10 h-10"
+                alt=""
+              />
+              <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
             </section>
-
-            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML بیضی (مواد غذایی)
-            </section>
+            <a
+              href=""
+              class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500"
+              >جزئیات بیشتر</a
+            >
+          </section>
+          <img
+            src="./../images/product-2.jpg"
+            class="w-full h-full product-image"
+            alt=""
+          />
         </section>
 
-        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
+        <section
+          class="font-light text-center text-sm md:text-base text-gray-700 mt-3"
+        >
+          ظروف IML بیضی (مواد غذایی)
+        </section>
+      </section>
 
-            <section class="w-full relative overflow-hidden flex flex-wrap product">
-                <section
-                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
-                    <section class="flex items-center space-x-3 space-x-reverse">
-                        <img src="./../images/product-3-icon.svg" class="w-10 h-10" alt="">
-                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
-                    </section>
-                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
-                </section>
-                <img src="./../images/product-3.jpg" class="w-full h-full product-image" alt="">
+      <section
+        class="w-2/3 sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container"
+      >
+        <section class="w-full relative overflow-hidden flex flex-wrap product">
+          <section
+            class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay"
+          >
+            <section class="flex items-center space-x-3 space-x-reverse">
+              <img
+                src="./../images/product-3-icon.svg"
+                class="w-10 h-10"
+                alt=""
+              />
+              <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
             </section>
-
-            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">درپوش پلاستیکی</section>
+            <a
+              href=""
+              class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500"
+              >جزئیات بیشتر</a
+            >
+          </section>
+          <img
+            src="./../images/product-3.jpg"
+            class="w-full h-full product-image"
+            alt=""
+          />
         </section>
 
-        <section class="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container">
-
-            <section class="w-full relative overflow-hidden flex flex-wrap gap-2 product">
-                <section
-                    class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay">
-                    <section class="flex items-center space-x-3 space-x-reverse">
-                        <img src="./../images/product-4-icon.svg" class="w-10 h-10" alt="">
-                        <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
-                    </section>
-                    <a href="" class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500">جزئیات بیشتر</a>
-                </section>
-                <img src="./../images/product-4.jpg" class="w-full h-full product-image" alt="">
-            </section>
-
-            <section class="font-light text-center text-sm md:text-base text-gray-700 mt-3">ظروف IML گرد (مواد غذایی)
-            </section>
+        <section
+          class="font-light text-center text-sm md:text-base text-gray-700 mt-3"
+        >
+          درپوش پلاستیکی
         </section>
+      </section>
+
+      <section
+        class="w-2/3 sm:w-1/3 md:w-1/4 lg:w-1/5 my-4 translate-y-[300%] product-container"
+      >
+        <section
+          class="w-full relative overflow-hidden flex flex-wrap gap-2 product"
+        >
+          <section
+            class="w-full h-full bg-gray-800 bg-opacity-30 absolute translate-x-[100%] flex flex-col justify-center items-center space-y-4 product-overlay"
+          >
+            <section class="flex items-center space-x-3 space-x-reverse">
+              <img
+                src="./../images/product-4-icon.svg"
+                class="w-10 h-10"
+                alt=""
+              />
+              <h5 class="text-gray-100">مناسب برای مواد غذایی</h5>
+            </section>
+            <a
+              href=""
+              class="text-gray-200 px-3 py-2 text-xs rounded-sm bg-yellow-500"
+              >جزئیات بیشتر</a
+            >
+          </section>
+          <img
+            src="./../images/product-4.jpg"
+            class="w-full h-full product-image"
+            alt=""
+          />
+        </section>
+
+        <section
+          class="font-light text-center text-sm md:text-base text-gray-700 mt-3"
+        >
+          ظروف IML گرد (مواد غذایی)
+        </section>
+      </section>
     </section>
     <!-- end products -->
 
     <!-- start customers -->
 
     <section class="container min-h-[20rem]">
-        <div class="text-center py-12">
-            <h2 class="section-title">
-                مشتریان ما
-            </h2>
+      <div class="text-center py-12">
+        <h2 class="section-title">مشتریان ما</h2>
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper" id="customer-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper items-center justify-center">
+          <!-- Slides -->
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo1.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo2.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo3.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo4.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo5.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo6.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo7.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo8.svg" alt="" />
+          </div>
         </div>
-        <!-- Slider main container -->
-        <div class="swiper" id="customer-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper items-center justify-center">
-                <!-- Slides -->
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo1.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo2.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo3.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo4.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo5.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo6.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo7.svg" alt="" />
-                </div>
-                <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
-                    <img src="../images/customers-logo8.svg" alt="" />
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- end customers -->
@@ -438,6 +684,5 @@
     <script src="../../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="../js/index.js"></script>
-</body>
-
+  </body>
 </html>
