@@ -30,6 +30,5 @@
   .swiper-slide.swiper-slide-active {
     z-index: 99;
     padding-top: 0;
-    opacity: 100%;
   }
 }
