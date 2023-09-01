@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .title {
-  @apply text-3xl font-bold text-slate-700 py-5 mt-16;
+  @apply text-3xl font-bold text-slate-700 py-5;
 }
 
 
@@ -53,7 +53,7 @@
   width: 4px;
   height: 8px;
   position: absolute;
-  top: 24px;
+  top: 22px;
   right: 2px;
   transform: rotate(135deg);
 }
@@ -62,8 +62,8 @@
   color: black;
   font-size: 16px;
   background: transparent;
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   border: solid 3px black;
   outline: none;
@@ -99,6 +99,7 @@
   padding-bottom: .3rem;
   position: relative;
   color: #666;
+  margin-top: 2rem;
 }
 
 .section-title::before {
