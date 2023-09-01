@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .title {
-  @apply text-3xl font-bold text-slate-700 py-5 mt-16;
+  @apply text-3xl font-bold text-slate-700 py-5;
 }
 
 
@@ -99,6 +99,7 @@
   padding-bottom: .3rem;
   position: relative;
   color: #666;
+  margin-top: 2rem;
 }
 
 .section-title::before {

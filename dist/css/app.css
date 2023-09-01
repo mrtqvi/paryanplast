@@ -1524,7 +1524,6 @@ video {
 }
 
 .title {
-  margin-top: 4rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   font-size: 1.875rem;
@@ -1645,6 +1644,7 @@ video {
   padding-bottom: .3rem;
   position: relative;
   color: #666;
+  margin-top: 2rem;
 }
 
 .section-title::before {
