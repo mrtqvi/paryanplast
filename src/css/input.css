@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .title {
-  @apply text-3xl font-bold text-slate-700 py-5;
+  @apply text-3xl font-bold text-slate-700 py-5 mt-16;
 }
 
 
@@ -30,6 +30,11 @@
 }
 
 /* header */
+
+#header {
+  transition: background 1s;
+}
+
 .search {
   margin-left: 17px;
   margin-bottom: 10px;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h2 class="title text-center text-5xl">خدمات ما</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper items-center justify-center">
+          <!-- Slides -->
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo1.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo2.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo3.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo4.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo5.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo6.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo7.svg" alt="" />
+          </div>
+          <div class="swiper-slide md:w-[100px] w-[60px] cursor-pointer">
+            <img src="../images/customers-logo8.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../../node_modules/swiper/swiper-bundle.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        freeMode: true,
+        // Optional parameters
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>
