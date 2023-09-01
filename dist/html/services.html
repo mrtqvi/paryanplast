@@ -22,7 +22,7 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div
-              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+              class="swiper-slide opacity-50 md:pt-16 pb-4 md:transition-all md:duration-500"
             >
               <div class="flex flex-col items-center">
                 <div
@@ -64,7 +64,7 @@
               </div>
             </div>
             <div
-              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+              class="swiper-slide opacity-50 md:pt-16 pb-4 md:transition-all md:duration-500"
             >
               <div class="flex flex-col items-center">
                 <div
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div
-              class="swiper-slide md:pt-16 pb-4 md:transition-all md:duration-500"
+              class="swiper-slide opacity-50 md:pt-16 pb-4 md:transition-all md:duration-500"
             >
               <div class="flex flex-col items-center">
                 <div
@@ -173,11 +173,13 @@
           480: {},
           // when window width is >= 640px
           768: {
-            spaceBetween: 10,
+            spaceBetween: 100,
             centeredSlides: true,
             setWrapperSize: true,
             slideToClickedSlide: true,
-            loopedSlides: 2,
+            autoplay: false,
+
+            //  loopedSlides: 2,
             clickable: true,
             speed: 500,
 
@@ -190,11 +192,9 @@
         },
       });
 
-      window.addEventListener("load", (e) => {
-        console.log(e);
-        console.log(servicesSwiper.activeIndex-1);
-        servicesSwiper.slideTo(servicesSwiper.activeIndex-1);
-      });
+      // window.addEventListener("load", (e) => {
+      //   servicesSwiper.slideTo(servicesSwiper.activeIndex - 1);
+      // });
     </script>
     <!-- <script src="../js/index.js"></script> -->
   </body>
