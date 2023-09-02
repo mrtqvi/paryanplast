@@ -35,7 +35,7 @@ let isAboutUsOpen = false;
 
 readMore.addEventListener("click", (e) => {
   hiddenDiv.classList.toggle("hidden");
-  aboutUsParag.classList.toggle("h-full");
+  aboutUsParag.classList.toggle("!h-full");
 
   e.target.innerHTML = isAboutUsOpen ? "اطلاعات بیشتر..." : "نمایش کمتر";
   isAboutUsOpen = !isAboutUsOpen;
