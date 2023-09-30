@@ -43,3 +43,8 @@
     padding-top: 0;
   }
 }
+
+.comment-hidden {
+  opacity: 100%;
+  transform: translateX(0);
+}

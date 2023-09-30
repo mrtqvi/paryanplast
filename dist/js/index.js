@@ -96,7 +96,7 @@ allServiceImg.forEach((img) => {
   });
 });
 
-const servicesSwiper = new Swiper("#services-swiper", {
+const sericesSwiper = new Swiper("#services-swiper", {
   slidesperview: 1,
   loop: true,
   spaceBetween: 10,
@@ -114,6 +114,7 @@ const servicesSwiper = new Swiper("#services-swiper", {
     },
   },
 });
+
 const customerSwiper = new Swiper("#customer-swiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
@@ -131,9 +132,62 @@ const customerSwiper = new Swiper("#customer-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
 });
+
+// comments Start
+let commentDiv = document.querySelector("#commentDiv");
+let commentsData = [
+  {
+    Src: "../images/comments-girl2.jpeg",
+    name: "هانیه محمدی",
+    text: " بسیار عالی و تمیز کار کردند با توجه به قیمت مناسبی که داشتن واقعا راضی بودم",
+  },
+  {
+    Src: "../images/comments-boy1.jpg",
+    name: "محمد سعادت",
+    text: " بسیار عالی و تمیز کار کردند با توجه به قیمت مناسبی که داشتن واقعا راضی بودم",
+  },
+  {
+    Src: "../images/comments-girl1.jpg",
+    name: "سپیده راستگو",
+    text: " بسیار عالی و تمیز کار کردند با توجه به قیمت مناسبی که داشتن واقعا راضی بودم",
+  },
+];
+let commentIndex = 0;
+const commentsHandler = () => {
+  commentDiv.insertAdjacentHTML(
+    "afterbegin",
+    `<div
+    class="flex shadow-xl p-4 rounded-lg items-center bg-white border border-gray-300 transition-all duration-1000 translate-x-[500px] "
+    >
+    <div class="w-1/4">
+      <img
+        class="aspect-square object-cover rounded-full"
+        src=${commentsData[commentIndex].Src}
+        alt=""
+      />
+    </div>
+    <div class="px-6 w-3/4">
+      <h4 class="font-bold text-lg">${commentsData[commentIndex].name}</h4>
+      <p class="text-justify">
+      ${commentsData[commentIndex].text}
+      </p>
+    </div>
+    </div>`
+  );
+  setTimeout(() => {
+    commentDiv.children[0].classList.add("comment-hidden");
+
+    setTimeout(() => {
+      commentDiv.children[0].classList.add("!opacity-0");
+
+      setTimeout(() => {
+        commentDiv.children[0].remove();
+      }, 1000);
+    }, 5000);
+  }, 1000);
+  commentIndex++;
+  commentIndex === commentsData.length && clearInterval(commentsInterval);
+};
+commentsHandler();
+let commentsInterval = setInterval(commentsHandler, 7100);
